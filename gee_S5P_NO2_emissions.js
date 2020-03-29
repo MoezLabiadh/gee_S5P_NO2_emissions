@@ -27,8 +27,6 @@ function addLayerSelector(mapToChange, defaultValue, position) {
     mapToChange.layers().set(0, ui.Map.Layer(images[selection]));
   }
 
-  // Configure a selection dropdown to allow the user to choose between images,
-  // and set the map to update when a user makes a selection.
   var select = ui.Select({items: Object.keys(images), onChange: updateMap});
   select.setValue(Object.keys(images)[defaultValue], true);
 
